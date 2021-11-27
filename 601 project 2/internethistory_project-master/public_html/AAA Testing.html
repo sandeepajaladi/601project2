@@ -98,12 +98,13 @@
                         </div>
                         <div class="col">
                             <h5 class="font-weight-bold">Software Testing </h5>
-                            <p style="text-align:justify">Software Testing is a method to check whether the actual
-                                software product matches expected requirements and to ensure that software product is
-                                Defect free.The purpose of software testing is to identify errors, gaps or missing
-                                requirements in contrast to actual requirements.Software Testing is Important because if
-                                there are any bugs or errors in the software, it can be identified early and can be
-                                solved before delivery of the software product. Properly tested software product ensures
+                            <p style="text-align:justify">Software Testing checks the actual
+                                software product matches expected requirements and to ensure that software product
+                                doesn't deviate from the requirements and is bug free.The purpose of software testing is
+                                to identify errors, any deviations from the
+                                actual requirements.Software Testing is very important because if
+                                any bugs or errors in the software, these need to be identified early and resolved
+                                before delivery of the software product. Properly tested software product ensures
                                 reliability, security and high performance which further results in time saving, cost
                                 effectiveness and customer satisfaction. </p>
                             <!--
@@ -113,20 +114,20 @@
                     </div>
                     <h5 class="font-weight-bold">Unit Testing</h5>
 
-                    <p style="text-align:justify">UNIT TESTING is a type of software testing where individual units or
-                        components of a software are tested. The purpose is to validate that each unit of the software
+                    <p style="text-align:justify">In UNIT TESTING every individual unit or
+                        component of the software is tested. The purpose is to validate that each unit of the software
                         code performs as expected. Unit Testing is done during the development (coding phase) of an
                         application by the developers. Unit Tests isolate a section of code and verify its correctness.
-                        A unit may be an individual function, method, procedure, module, or object.Unit Testing is
-                        important because software developers sometimes try saving time doing minimal unit testing and
-                        this is myth because inappropriate unit testing leads to high cost Defect fixing during System
+                        A unit can be individual function, method, procedure, module, or object.Unit Testing is
+                        important because software developers sometimes reduce the time doing minimal unit testing as
+                        inappropriate unit testing leads to high cost Defect fixing during System
                         Testing, Integration Testing and even Beta Testing after application is built. If proper unit
                         testing is done in early development, then it saves time and money in the end.
                     <h5 class="font-weight-bold">ARRANGE-ACT-ASSERT</h5>
-                    <p style="text-align:justify">Arrange-Act-Assert is a great way to structure test cases. It
-                        prescribes an order of operations: Arrange inputs and targets. Arrange steps should set
-                        up the test case. Does the test require any objects or special settings? Does it need to
-                        prep a database? Does it need to log into a web app? Handle all of these operations at
+                    <p style="text-align:justify">Arrange-Act-Assert ,popularly known as the AAA testing is a great way
+                        to structure test cases. It
+                        describes the order of operations: Arrange inputs and targets. Arrange steps should set
+                        up the test case. It handles all of these operations at
                         the start of the test. Act on the target behavior. Act steps should cover the main thing
                         to be tested. This could be calling a function or method, calling a REST API, or
                         interacting with a web page. Keep actions focused on the target behavior.</p>
@@ -162,9 +163,9 @@
                                 <br>
                                 <code> def test_calculator_add_result():<br>
                                     """testing calculator result """<br>
-                                    &nbsp calc = Calculator()<br>
-                                    &nbsp result = calc.add(1,2)<br>
-                                    &nbsp assert result == 3 </code> <br>
+                                    &nbsp; calc = Calculator()<br>
+                                    &nbsp; result = calc.add(1,2)<br>
+                                    &nbsp; assert result == 3 </code> <br>
 
 
                             </p>
@@ -199,6 +200,8 @@
                         <a class="Github link-Calculator Unit Testing"
                            href="https://github.com/sandeepajaladi/sj235_calc/blob/improved_calc/tests/calculator_test.py">Github
                             link-Calculator test folder</a><br>
+                        <br>
+                        <h5 class="font-weight-bold">AAA EXternal data for testing</h5>
                         Let us now see, how to write a program to read from a csv file .We have a csv file that has
                         column 1 and column 2 which have number1 and number2 values on which the arithmetic operations
                         addition, subtraction, multiplication and division needs to be performed.We need to import
@@ -224,25 +227,25 @@
                             import logging<br>
                             filename="Addition - Sheet1.csv"<br>
                             df=pd.read-csv(("Addition- Sheet1.csv")<br>
-                            &nbsp def arithmetic(taskList, df, filename):<br>
+                            &nbsp; def arithmetic(taskList, df, filename):<br>
 
-                            &nbsp &nbsp for task in taskList:<br>
-                            &nbsp &nbsp &nbsp if task == 'Addition':<br>
-                            &nbsp &nbsp &nbsp &nbsp df[task] = df['Number 1'] + df['Number 2']<br>
-                            &nbsp &nbsp &nbsp &nbsp logging.info("Addition Complete for Input file {}".format(filename))<br>
-                            &nbsp &nbsp &nbsp elif task == 'Subtraction':<br>
-                            &nbsp &nbsp &nbsp &nbsp df[task] = df['Number 1'] - df['Number 2']<br>
-                            &nbsp &nbsp &nbsp &nbsp logging.info("Subtraction Complete for Input file
+                            &nbsp; &nbsp; for task in taskList:<br>
+                            &nbsp; &nbsp;; &nbsp; if task == 'Addition':<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; df[task] = df['Number 1'] + df['Number 2']<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; logging.info("Addition Complete for Input file {}".format(filename))<br>
+                            &nbsp; &nbsp; &nbsp; elif task == 'Subtraction':<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; df[task] = df['Number 1'] - df['Number 2']<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; logging.info("Subtraction Complete for Input file
                             {}".format(filename))<br>
-                            &nbsp &nbsp &nbsp elif task == 'Multiplication':<br>
-                            &nbsp &nbsp &nbsp &nbsp df[task] = df['Number 1'] * df['Number 2']<br>
-                            &nbsp &nbsp &nbsp &nbsp logging.info("Multiplication Complete for Input file
+                            &nbsp; &nbsp; &nbsp; elif task == 'Multiplication':<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; df[task] = df['Number 1'] * df['Number 2']<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; logging.info("Multiplication Complete for Input file
                             {}".format(filename))<br>
-                            &nbsp &nbsp&nbsp elif task == 'Division':<br>
-                            &nbsp &nbsp &nbsp &nbsp df[task] = df['Number 1'] / df['Number 2']<br>
-                            &nbsp &nbsp &nbsp &nbsp logging.info("Division Complete for Input file {}".format(filename))<br>
+                            &nbsp; &nbsp; &nbsp; elif task == 'Division':<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; df[task] = df['Number 1'] / df['Number 2']<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; logging.info("Division Complete for Input file {}".format(filename))<br>
 
-                            &nbsp &nbsp &nbsp &nbsp return df</code><br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; return df</code><br>
                         The below snippet creates a new file,calculations.log and writes the time stamp of the
                         calculation performed<br>
 
@@ -258,15 +261,15 @@
 
 
                         <code>def test_addition(self):<br>
-                            &nbsp test_data = CsvReader("Tests/Data/addition.csv").data<br>
-                            &nbsp &nbsp for row in test_data:<br>
-                            &nbsp &nbsp &nbsp result = (row['Addition'])<br>
-                            &nbsp &nbsp &nbsp self.assertEqual(self.arithmetic.addition(row['Value 1'], row['Value 2']),
+                            &nbsp; test_data = CsvReader("Tests/Data/addition.csv").data<br>
+                            &nbsp; &nbsp; for row in test_data:<br>
+                            &nbsp; &nbsp; &nbsp; result = (row['Addition'])<br>
+                            &nbsp; &nbsp; &nbsp; self.assertEqual(self.arithmetic.addition(row['Value 1'], row['Value 2']),
                             Addition)<br>
-                            &nbsp &nbsp &nbsp self.assertEqual(self.arithmetic.addition, Addition)</code>
+                            &nbsp; &nbsp; &nbsp; self.assertEqual(self.arithmetic.addition, Addition)</code>
 
 
-                        </code>
+
 
 
                     </div>

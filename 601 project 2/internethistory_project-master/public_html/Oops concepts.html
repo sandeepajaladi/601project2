@@ -127,13 +127,13 @@
                             Let us take the example of calculator to demonstrate encapsulation<br><br>
 
                             <code>class Calculator:<br>
-                                &nbsp def __init__(self,number1,number2)<br>
-                                &nbsp &nbsp self.number1=number1<br>
-                                &nbsp &nbsp self.number2=number2<br>
-                                &nbsp def add(self)<br>
-                                &nbsp &nbsp return self.number1 + self.number2<br>
-                                &nbsp ob1=Calculator(3,4)<br>
-                                &nbsp ob.add()</code><br><br>
+                                &nbsp; def __init__(self,number1,number2)<br>
+                                &nbsp; &nbsp; self.number1=number1<br>
+                                &nbsp; &nbsp; self.number2=number2<br>
+                                &nbsp; def add(self)<br>
+                                &nbsp; &nbsp; return self.number1 + self.number2<br>
+                                &nbsp; ob1=Calculator(3,4)<br>
+                                &nbsp; ob.add()</code><br><br>
 
                             Now when you run this program ,it will return an output of 7
 
@@ -141,13 +141,13 @@
                             prefixing a single underscore (_):<br><br>
 
                             <code>class Calculator:<br>
-                                &nbsp def __init__(self,number1,number2)<br>
-                                &nbsp &nbsp self.number1=number1<br>
-                                &nbsp &nbsp self.number2=number2<br>
-                                &nbsp def __add(self)<br>
-                                &nbsp &nbsp return self.number1 + self.number2<br>
-                                &nbsp ob1=Calculator(3,4)<br>
-                                &nbsp ob.add()</code><br><br>
+                                &nbsp; def __init__(self,number1,number2)<br>
+                                &nbsp; &nbsp; self.number1=number1<br>
+                                &nbsp; &nbsp; self.number2=number2<br>
+                                &nbsp; def __add(self)<br>
+                                &nbsp; &nbsp; return self.number1 + self.number2<br>
+                                &nbsp; ob1=Calculator(3,4)<br>
+                                &nbsp; ob.add()</code><br><br>
 
                             Now, we cannot access the add method ,outside the class in ob.add().The code would throw an
                             error saying 'Calculator object has no attribute 'add'<br>
@@ -208,7 +208,7 @@
                             # Polymorphism<br>
 
                             <code>def add(x, y, z = 0):<br>
-                                &nbsp return x + y+z<br>
+                                &nbsp; return x + y+z<br>
 
                                 # Driver code<br>
                                 print(add(2, 3))<br>
@@ -257,12 +257,12 @@
                             very basic example of Parent class i.e. Employee which has printname method that would print
                             firstname and last name.The child class Employee in herits the proerty of the parent class,
                             Employee </p><code>class Employee:<br>
-                        &nbsp def __init__(self, fname, lname):<br>
-                        &nbsp &nbsp self.firstname = fname<br>
-                        &nbsp &nbsp self.lastname = lname<br>
+                        &nbsp; def __init__(self, fname, lname):<br>
+                        &nbsp; &nbsp; self.firstname = fname<br>
+                        &nbsp; &nbsp; self.lastname = lname<br>
 
-                        &nbsp def printname(self):<br>
-                        &nbsp &nbsp print(self.firstname, self.lastname)<br></code><br>
+                        &nbsp; def printname(self):<br>
+                        &nbsp; &nbsp; print(self.firstname, self.lastname)<br></code><br>
 
                         Create a child class, Employee<br><br>
                         <code>x=class Professor(Employee)<br>
@@ -283,15 +283,15 @@
                             """Base class for calculation """
                             #contstructor and it is the first function called when an object of the class is
                             instantiated<br>
-                            &nbsp def __init__(self,value_a, value_b):<br>
+                            &nbsp; def __init__(self,value_a, value_b):<br>
                             """Initiate and encapsulate the values"""<br>
-                            &nbsp &nbsp self.value_a = value_a<br>
-                            &nbsp &nbsp self.value_b = value_b<br>
+                            &nbsp; &nbsp; self.value_a = value_a<br>
+                            &nbsp; &nbsp; self.value_b = value_b<br>
                             # Class Factory Method bound to the class and not the instance of the class<br>
                             @classmethod<br>
-                            &nbsp def create(cls, value_a, value_b):<br>
+                            &nbsp; def create(cls, value_a, value_b):<br>
                             """ Clear function"""<br>
-                            &nbsp return cls(value_a,value_b)</code><br>
+                            &nbsp; return cls(value_a,value_b)</code><br>
 
                         Addition is our child class that inherits the values from the base class Calculation
 
@@ -307,9 +307,9 @@
                             """The addition class has one method to get the result of the the calculation A and B come
                             from<br>
                             the calculation parent class"""<br>
-                            &nbsp def get_result(self):<br>
+                            &nbsp; def get_result(self):<br>
                             """Returns the result of addition function"""<br>
-                            &nbsp &nbsp return self.value_a + self.value_b<br></code>
+                            &nbsp; &nbsp; return self.value_a + self.value_b<br></code>
                     </div>
                     <hr>
 
@@ -354,24 +354,24 @@
                                 class Calculation(ABC): <br>
 
                                 # abstract method <br>
-                                &nbsp def operation(self,number1,number2): <br>
-                                &nbsp &nbsp self.number1=number1<br>
-                                &nbsp &nbsp self.number2=number2 <br>
+                                &nbsp; def operation(self,number1,number2): <br>
+                                &nbsp; &nbsp; self.number1=number1<br>
+                                &nbsp; &nbsp; self.number2=number2 <br>
                                 pass <br><br>
 
                                 class Addition(Calculation): <br>
 
 
-                                &nbsp def add(self,number1,number2): <br>
-                                &nbsp &nbsp return number1+number2 <br>
+                                &nbsp; def add(self,number1,number2): <br>
+                                &nbsp; &nbsp; return number1+number2 <br>
 
                                 class Subtraction(Calculation):<br>
-                                &nbsp def subtract(self): <br>
-                                &nbsp &nbsp return number1+number2 <br><br>
+                                &nbsp; def subtract(self): <br>
+                                &nbsp; &nbsp; return number1+number2 <br><br>
 
                                 class Multiplication(Calculation): <br>
-                                &nbsp def multiplicy(self): <br>
-                                &nbsp &nbsp return number1*number2 <br><br>
+                                &nbsp; def multiplicy(self): <br>
+                                &nbsp; &nbsp; return number1*number2 <br><br>
 
 
                                 # Driver code <br>
