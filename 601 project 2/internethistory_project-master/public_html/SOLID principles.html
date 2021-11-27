@@ -57,7 +57,6 @@
                         <a class="dropdown-item" href="SOLID%20principles.html">SOLID principles</a>
                     </div>
                 </li>
-                S
             </ul>
         </div>
     </div>
@@ -109,7 +108,7 @@
                             <b>L</b>iskov substitution principle (LSP),<br>
                             <b>I</b>nterface segregation principle (ISP), and<br>
                             <b>D</b>ependency inversion principle (DIP).<br>
-                            </p>
+
                             <!--                            <p>There are three layers – wires, cable and Wi-Fi, TCP/IP & ROUTING, HTTPS & DNS works together for seamless data transmission.</p>-->
 
                         </div>
@@ -130,17 +129,17 @@
 
                         <code>Class User:<br>
 
-                            def __init__(self, num1, num2):<br>
-                            self.num1 = num1<br>
-                            self.num2 = num2<br>
-                            return num1+num2<br>
+                            &nbsp def __init__(self, num1, num2):<br>
+                            &nbsp &nbsp self.num1 = num1<br>
+                            &nbsp &nbsp self.num2 = num2<br>
+                            &nbsp &nbsp return num1+num2<br>
 
                             def add(self):<br>
-                            pass<br>
+                            &nbsp pass<br>
 
                             def save(self):<br>
                             # saves to database
-                            pass</code><br>
+                            &nbsp pass</code><br>
 
                         In the above code snippet, the user class not only gets the user but also saves him in a
                         database. The class handles both setting user data requirements and database connection and
@@ -210,13 +209,13 @@
                         </div>
                         <p style="text-align:justify"><code>class Calculator:<br>
 
-                            def calculate(self, a, b):<br>
-                            return a * b <br>
+                            &nbsp def calculate(self, a, b):<br>
+                            &nbsp &nbsp return a * b <br>
 
                             class Divide(Calculator):<br>
 
-                            def calculate(self, a, b):<br>
-                            return a / b</code><br><br>
+                            &nbsp def calculate(self, a, b):<br>
+                            &nbsp &nbsp return a / b</code><br><br>
                             In the above example, the two classes, even though the calculate methods take equal no of
                             arguments, the method in the Divide class could possibly throw a divide by zero error which
                             isn’t a possibility in its parent class (Calculator class) hence a violation of SOLID
@@ -277,22 +276,22 @@
 
 
                             """ This class is a collection of calculator functions """<br>
-                            result = 0<br>
-                            num_a = 0<br>
+                            &nbsp result = 0<br>
+                            &nbsp num_a = 0<br>
                             # Addition of two numbers<br>
-                            def add(self, num1_a, num2_b):<br>
+                            &nbsp def add(self, num1_a, num2_b):<br>
                             """ Function to add two numbers """<br>
-                            self.num_a = num1_a<br>
-                            self.result = self.num_a + num2_b<br>
-                            return self.result<br><br>
+                            &nbsp &nbsp self.num_a = num1_a<br>
+                            &nbsp &nbsp self.result = self.num_a + num2_b<br>
+                            &nbsp &nbsp return self.result<br><br>
 
 
                             # Subtraction of two numbers<br>
-                            def subtract(self, num1_a, num2_b):<br>
+                            &nbsp def subtract(self, num1_a, num2_b):<br>
                             """ Function to subtract two numbers """<br>
-                            self.num_a = num1_a<br>
-                            self.result = self.num_a - num2_b<br>
-                            return self.result</code><br><br>
+                            &nbsp &nbsp self.num_a = num1_a<br>
+                            &nbsp &nbsp self.result = self.num_a - num2_b<br>
+                            &nbsp &nbsp return self.result</code><br><br>
 
 
                             The simple Calculator class above with two operations works but what if we want to add a new
@@ -360,7 +359,8 @@
 <footer class="py-5  bg-dark">
     <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Sandeepa Jaladi 2021</p>
         <p class="m-0 text-center text-white">
-            <a href="https://github.com/njitvjk/internethistory_project">Project Repo</a><span></span> <a
+            <a href="https://github.com/sandeepajaladi/601project2/tree/master/601%20project%202/internethistory_project-master">Project
+                Repo</a><span></span> <a
                 href="http://validator.w3.org/check/referer"><img src="https://www.w3.org/Icons/valid-html401-blue"
                                                                   alt=""></a></p>
 

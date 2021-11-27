@@ -160,11 +160,11 @@
                             <p style="text-align:justify">
                                 Here, let us take a very simple example of unit testing of addition function <br>
                                 <br>
-                                def test_calculator_add_result():<br>
-                                """testing calculator result """<br>
-                                calc = Calculator()<br>
-                                result = calc.add(1,2)<br>
-                                assert result == 3<br>
+                                <code> def test_calculator_add_result():<br>
+                                    """testing calculator result """<br>
+                                    &nbsp calc = Calculator()<br>
+                                    &nbsp result = calc.add(1,2)<br>
+                                    &nbsp assert result == 3 </code> <br>
 
 
                             </p>
@@ -198,7 +198,75 @@
                             link-Calculator main program</a>
                         <a class="Github link-Calculator Unit Testing"
                            href="https://github.com/sandeepajaladi/sj235_calc/blob/improved_calc/tests/calculator_test.py">Github
-                            link-Calculator test folder</a>
+                            link-Calculator test folder</a><br>
+                        Let us now see, how to write a program to read from a csv file .We have a csv file that has
+                        column 1 and column 2 which have number1 and number2 values on which the arithmetic operations
+                        addition, subtraction, multiplication and division needs to be performed.We need to import
+                        pandas to read from the csv files.Let us look in to the simple code below.
+
+                        <code>
+                            import pandas as pd <br>
+                            datafile = pd.read_csv("Addition - Sheet1.csv")<br>
+
+                            datafile["addition"]=datafile["number1"] + datafile["number2"]<br>
+                            datafile["subtraction"]=datafile["number1"] + datafile["number2"]<br>
+                            datafile["multiplication"]=datafile["number1"] + datafile["number2"]<br>
+                            datafile["division"]=datafile["number1"] + datafile["number2"]<br>
+                            print(datafile)<br><br>
+                        </code>
+                        Let us take another example,refer to the snippet below.Here, we are passing the column values ,
+                        Addition, Subtraction,Mutiplication and Division in the attribute task list and we are looping
+                        through the attribute,tasklist aand we are performing the operation and storing the result in
+                        the csv file .We are creating a log file which writes the time stamp of each operation along
+                        with the file name.<br>
+                        <code>
+                            import pandas as pd<br>
+                            import logging<br>
+                            filename="Addition - Sheet1.csv"<br>
+                            df=pd.read-csv(("Addition- Sheet1.csv")<br>
+                            &nbsp def arithmetic(taskList, df, filename):<br>
+
+                            &nbsp &nbsp for task in taskList:<br>
+                            &nbsp &nbsp &nbsp if task == 'Addition':<br>
+                            &nbsp &nbsp &nbsp &nbsp df[task] = df['Number 1'] + df['Number 2']<br>
+                            &nbsp &nbsp &nbsp &nbsp logging.info("Addition Complete for Input file {}".format(filename))<br>
+                            &nbsp &nbsp &nbsp elif task == 'Subtraction':<br>
+                            &nbsp &nbsp &nbsp &nbsp df[task] = df['Number 1'] - df['Number 2']<br>
+                            &nbsp &nbsp &nbsp &nbsp logging.info("Subtraction Complete for Input file
+                            {}".format(filename))<br>
+                            &nbsp &nbsp &nbsp elif task == 'Multiplication':<br>
+                            &nbsp &nbsp &nbsp &nbsp df[task] = df['Number 1'] * df['Number 2']<br>
+                            &nbsp &nbsp &nbsp &nbsp logging.info("Multiplication Complete for Input file
+                            {}".format(filename))<br>
+                            &nbsp &nbsp&nbsp elif task == 'Division':<br>
+                            &nbsp &nbsp &nbsp &nbsp df[task] = df['Number 1'] / df['Number 2']<br>
+                            &nbsp &nbsp &nbsp &nbsp logging.info("Division Complete for Input file {}".format(filename))<br>
+
+                            &nbsp &nbsp &nbsp &nbsp return df</code><br>
+                        The below snippet creates a new file,calculations.log and writes the time stamp of the
+                        calculation performed<br>
+
+                        <code>log = 'calculations.log'
+                            logging.basicConfig(filename = log, level = logging.DEBUG, format = '%(asctime)s
+                            %(message)s', datefmt = "%d/%m/%Y %H:%
+                            f1 = arithmetic(['Subtraction', 'Addition', 'Multiplication', 'Division'], df,
+                            filename)</code><br>
+                        <img src="assets/ecom_search_social/csv1.jpg" alt="..."/>
+
+                        Below is the AAA testing that is used to assert that the two values taken to perform the
+                        operation is equal to the result for the operation operated <br>
+
+
+                        <code>def test_addition(self):<br>
+                            &nbsp test_data = CsvReader("Tests/Data/addition.csv").data<br>
+                            &nbsp &nbsp for row in test_data:<br>
+                            &nbsp &nbsp &nbsp result = (row['Addition'])<br>
+                            &nbsp &nbsp &nbsp self.assertEqual(self.arithmetic.addition(row['Value 1'], row['Value 2']),
+                            Addition)<br>
+                            &nbsp &nbsp &nbsp self.assertEqual(self.arithmetic.addition, Addition)</code>
+
+
+                        </code>
 
 
                     </div>
@@ -257,7 +325,8 @@
         <!--        <p class="m-0 text-center text-white">Image Credit: <a href="https://www.CreativeCommons.org/">CreativeCommons</a></p>-->
         <p class="m-0 text-center text-white">Copyright &copy; Sandeepa Jaladi 2021</p>
         <p class="m-0 text-center text-white">
-            <a href="https://github.com/njitvjk/internethistory_project">Project Repo</a><span></span> <a
+            <a href="https://github.com/sandeepajaladi/601project2/tree/master/601%20project%202/internethistory_project-master">Project
+                Repo</a><span></span> <a
                 href="http://validator.w3.org/check/referer"><img src="https://www.w3.org/Icons/valid-html401-blue"
                                                                   alt=""></a></p>
 
