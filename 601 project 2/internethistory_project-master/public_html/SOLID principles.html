@@ -63,7 +63,7 @@
 </nav>
 <!-- Hero section-->
 <div class="container bg-grey mt-2">
-    <h5 class="display-6 text-center ">SOLID -The first 5 principles of OOP</h5>
+    <h5 class="display-6 text-center ">SOLID -The first 5 principles of OOPs!</h5>
     <!--  <p class="lead"></p>-->
 </div>
 
@@ -101,25 +101,25 @@
                             <p style="text-align:justify">In object-oriented design, the SOLID principles are the five
                                 design principles that help to make the code cleaner, more flexible, and easier to
                                 change. The principles were compiled by Robert C. Martin.The name SOLID is an acronym,
-                                made up of the names of five principles. Namely, these principles are</p><br>
+                                made up of the names of five principles. They are as follow</p><br>
 
-                            <b>S</b>ingle responsibility principle (SRP),<br>
-                            <b>O</b>pen-closed principle (OCP),<br>
-                            <b>L</b>iskov substitution principle (LSP),<br>
-                            <b>I</b>nterface segregation principle (ISP), and<br>
-                            <b>D</b>ependency inversion principle (DIP).<br>
+                            *<b>S</b>ingle responsibility principle (SRP),<br>
+                            *<b>O</b>pen-closed principle (OCP),<br>
+                            *<b>L</b>iskov substitution principle (LSP),<br>
+                            *<b>I</b>nterface segregation principle (ISP), and<br>
+                            *<b>D</b>ependency inversion principle (DIP).<br>
 
                             <!--                            <p>There are three layers – wires, cable and Wi-Fi, TCP/IP & ROUTING, HTTPS & DNS works together for seamless data transmission.</p>-->
 
                         </div>
                     </div>
                     <p style="text-align:justify"><b>The Single Responsibility Principle :</b>A class should have one,
-                        and only one, reason to change. meaning that a class should have only one job.Following the
-                        Single Responsibility Principle is important.Its easier to test one thing at a time, one
-                        function.Essentially the name of the function should be very descriptive as to what action it
+                        and only one, reason to change. meaning that a class should have only one job.It is very important to follow the
+                         principle of Single Responsibility .It is always easier to test one thing at a time, one
+                        function at a time.It is very important that the name of the function should be very descriptive as to the action it it
                         performs.For example, when many different teams are working on the same project and keep editing
                         the same class for different reasons, this can lead to incompatible modules.This also makes
-                        version control easier. Merge conflicts are another example. They appear when different teams
+                        version control easier. Merge conflicts are another excellent example of this. They appear when different teams
                         change the same file. But if the SRP is followed, fewer conflicts will appear – files will have
                         a single reason to change, and conflicts that do exist will be easier to resolve.
 
@@ -166,10 +166,10 @@
                             <p style="text-align:justify">Objects or entities should be open for extension but closed
                                 for modification.
 
-                                This means that a class should be extendable without modifying the class itself.that is,
+                                This means that a class should be extendable without modifying the class itself,that is,
                                 such an entity can allow its behaviour to be extended without modifying its source
                                 code.The implementations of an interface are independent of each other and don’t need to
-                                share any code. If you consider it beneficial that two implementations of an interface
+                                share any code. If you consider it an advantage that two implementations of an interface
                                 share some code, you can either use inheritance or composition.We should be able to add
                                 new functionality without touching the existing code for the class. This is because
                                 whenever we modify the existing code, we are taking the risk of creating potential bugs.
@@ -178,12 +178,18 @@
                             </p>
                             <!--                            <p>IPv6 is the most recent version of the Internet Protocol. This new IP address version is being deployed to fulfil the need for more Internet addresses. It was aimed to resolve issues that are associated with IPv4. With 128-bit address space, it allows 340 undecillion unique address space. DNS and IPs are designed to scale.</p>-->
                         </div>
-                        <p style="text-align:justify">Code to add two numbers and code to add the list of numbers.So we
-                            should avoid touching the tested and reliable (mostly) production code if possible.We can
-                            add a new functionality without touching the class with the help of interfaces and abstract
+                        <p style="text-align:justify">Code to add two numbers and code to add the list of numbers should be separate .So we
+                            should prefer not to touch the already  tested and reliable working  production code if ,this is a possibility.We can
+                            should try adding a  new functionality without touching the  existing class with the help of interfaces and abstract
                             classes.Here , let us explain this with the example of a calculator
-                            We can have one function to add two numbers and another function to add a list f
-                            numbers </p>
+                            We can have one function to add two numbers and another function to add a list of
+                            numbers
+                            <code>
+                                total = 0 <br>
+                                mylist = [11, 5, 17, 18, 23]<br>
+                                for ele in range(0, len(mylist)):<br>
+                                total = total + mylist[ele]<br></code><br>
+                        Snce the above code is to add a list of numbers and ,when in a different method and the changes are made , it wouldn't affect the addition method </p>
                     </div>
                     <hr>
                     <div class="row  ">
