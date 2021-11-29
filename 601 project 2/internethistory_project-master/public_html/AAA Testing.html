@@ -234,7 +234,8 @@
                             &nbsp; &nbsp; for task in taskList:<br>
                             &nbsp; &nbsp;; &nbsp; if task == 'Addition':<br>
                             &nbsp; &nbsp; &nbsp; &nbsp; df[task] = df['Number 1'] + df['Number 2']<br>
-                            &nbsp; &nbsp; &nbsp; &nbsp; logging.info("Addition Complete for Input file {}".format(filename))<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; logging.info("Addition Complete for Input file
+                            {}".format(filename))<br>
                             &nbsp; &nbsp; &nbsp; elif task == 'Subtraction':<br>
                             &nbsp; &nbsp; &nbsp; &nbsp; df[task] = df['Number 1'] - df['Number 2']<br>
                             &nbsp; &nbsp; &nbsp; &nbsp; logging.info("Subtraction Complete for Input file
@@ -245,7 +246,8 @@
                             {}".format(filename))<br>
                             &nbsp; &nbsp; &nbsp; elif task == 'Division':<br>
                             &nbsp; &nbsp; &nbsp; &nbsp; df[task] = df['Number 1'] / df['Number 2']<br>
-                            &nbsp; &nbsp; &nbsp; &nbsp; logging.info("Division Complete for Input file {}".format(filename))<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; logging.info("Division Complete for Input file
+                            {}".format(filename))<br>
 
                             &nbsp; &nbsp; &nbsp; &nbsp; return df</code><br>
                         The below snippet creates a new file,calculations.log and writes the time stamp of the
@@ -266,12 +268,10 @@
                             &nbsp; test_data = CsvReader("Tests/Data/addition.csv").data<br>
                             &nbsp; &nbsp; for row in test_data:<br>
                             &nbsp; &nbsp; &nbsp; result = (row['Addition'])<br>
-                            &nbsp; &nbsp; &nbsp; self.assertEqual(self.arithmetic.addition(row['Value 1'], row['Value 2']),
+                            &nbsp; &nbsp; &nbsp; self.assertEqual(self.arithmetic.addition(row['Value 1'], row['Value
+                            2']),
                             Addition)<br>
                             &nbsp; &nbsp; &nbsp; self.assertEqual(self.arithmetic.addition, Addition)</code>
-
-
-
 
 
                     </div>
@@ -307,7 +307,8 @@
                                     href="https://freecontent.manning.com/making-better-unit-tests-part-1-the-aaa-pattern/">AAA
                                 Pattern</a></p>
                             <p class="text-center"><a href="https://www.youtube.com/watch?v=ymA7FmWR-40">Unit Test</a>
-                            <p class="text-center"><a href="https://www.testim.io/blog/software-testing-basics/">Testing -Basics</a>
+                            <p class="text-center"><a href="https://www.testim.io/blog/software-testing-basics/">Testing
+                                -Basics</a>
                             </p>
                         </div>
 
